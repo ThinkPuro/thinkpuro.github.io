@@ -1,5 +1,0 @@
-name: Think Puro
-markdown: kramdown
-highlighter: null
-exclude: ["node_modules", "gulpfile.js", "package.json"]
-permalinks: prettify
