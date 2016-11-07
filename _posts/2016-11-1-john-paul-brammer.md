@@ -30,18 +30,21 @@ permalink: /project-brammer/
 <img src="/img/brammer/3.jpg" alt="wireframes" style="opacity: 0.5;">
 
 <div class="web-project">
+    <div class="browser-top"></div>
     <div class="browser">
         <img src="/img/brammer/2.png" alt="work">
     </div>
 </div>
 
 <div class="web-project">
+    <div class="browser-top"></div>
     <div class="browser">
         <img src="/img/brammer/4.png" alt="work">
     </div>
 </div>
 
 <div class="web-project">
+    <div class="browser-top"></div>
     <div class="browser">
         <img src="/img/brammer/5.png" alt="work">
     </div>
