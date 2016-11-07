@@ -1,0 +1,237 @@
+.work-close
+  background-color: #FFF
+  width: 70px
+  height: 70px
+  border-radius: 50%
+  position: fixed
+  top: 5em
+  right: 5em
+  z-index: 2
+  cursor: pointer !important
+  border: 5px solid $purored
+  +ease
+  opacity: 0
+  transform: translateX(30px) rotate(0deg)
+  transform-origin: center center
+  box-shadow: 0 5px 15px -2px rgba($purored, 0.5)
+  &:hover
+    border: 5px solid #AAA
+    transform: translateX(0) rotate(90deg)
+    box-shadow: 5px 0 15px -2px #CCC
+    .button
+      &:after, &:before
+        background-color: #AAA
+  .button
+    width: 25px
+    height: 25px
+    &:before, &:after
+      left: 50%
+      top: 50%
+      margin-left: -12px
+      margin-top: -2px
+      width: 25px
+      height: 2px
+      background-color: $purored
+      content: ""
+      position: absolute
+      transform: rotate(45deg)
+    &:after
+      transform: rotate(-45deg)
+
+.work-close-load
+  opacity: 1
+  transform: translateX(0)
+
+.work-content
+  background-color: #FFF
+  display: block
+  img
+    margin-bottom: 25px
+    min-width: 100%
+    height: auto
+
+
+.info-button
+  font-size: 14px
+  color: rgba(black,0.8)
+  cursor: pointer
+  position: fixed
+  right: 3.5em
+  top: 7em
+  z-index: 3
+  +ease
+  white-space: nowrap
+  i
+    line-height: default
+    margin: 0
+    margin-right: -5px
+  &:hover
+    color: $purored
+
+.work-item-header
+  margin-bottom: 150px
+
+.work-item-title
+  // color: #222
+  margin-right: 100px
+
+.web-project
+  width: 100%
+  margin-bottom: 25px
+
+.browser-top
+  position: relative
+  display: block
+  height: 25px
+  width: 100%
+  background-color: rgba(white, 0.9)
+  border-top: 1px solid #CCC
+  border-left: 1px solid #CCC
+  border-right: 1px solid #CCC
+  border-radius: 5px 5px 0 0
+
+.browser-top
+  &:after
+    content: "• • •"
+    color: #CCC
+    font-size: 30px
+    margin: 0
+    line-height: 1
+    letter-spacing: -0.9em
+    z-index: 1
+    background-color: pink
+    position: absolute
+    top: 0
+    left: 42px
+
+.browser
+  border: 1px solid #CCC
+  border-radius: 0 0 5px 5px
+  height: 55em
+  position: relative
+  overflow: hidden
+  width: 100%
+  background-color: rgba(white, 0.7)
+  &:hover
+    cursor: ns-resize
+// .spotlight
+//   position: absolute
+//   padding: 1.5em
+//   background-color: rgba(black, 0.8)
+//   top: 0
+//   left: 0
+//   right: 0
+//   bottom: 0
+//   z-index: 40000
+.browser img  
+  position: absolute
+  transition: all 10s
+  min-width: 100%
+  height: auto
+.browser iframe
+  border: none
+  min-width: 100%
+  height: 100%
+.up-button,.down-button
+  color: $purored
+  font-size: 3em
+  font-weight: 400
+  font-family: "franklin-gothic-urw", sans-serif
+  position: absolute
+  left: calc(100% - 2em)
+  z-index: 1
+  display: block
+  padding: 5px
+  background-color: #EEE
+  border: 1px solid #666
+  outline: none
+  box-shadow: none
+  &:active
+    background-color: #CCC
+
+.web-scroll
+  animation: webScroll 30s ease-in-out infinite
+
+.down-button
+  margin-top: 100px
+
+.work-text
+  margin: 25px 0
+  display: flex
+  justify-content: space-between
+  .col
+    width: calc(50% - 25px)
+  h2
+    font-family: "franklin-gothic-urw", sans-serif
+    font-size: 20px
+    font-weight: 400
+  p
+    +fluid-type(14, 16, 640, 1024)
+
+.work-thanks
+  text-align: center
+  margin: 100px 0 55px 0
+  display: block
+  position: relative
+  span
+    font-size: 18px
+    position: relative
+    top: 1px
+  h2
+    margin: 20px 0 5px 0
+    font-size: 30px
+    font-family: "franklin-gothic-urw", sans-serif
+    font-weight: 400
+    color: #666
+  &:after
+    content: ''
+    position: absolute
+    width: 150px
+    height: 150px
+    border-radius: 50%
+    background-color: #EEE
+    z-index: -1
+    top: 50%
+    left: 50%
+    margin-left: -75px
+    margin-top: -73px
+
+// Animation
+
+@keyframes webScroll
+  0%
+    margin-top: 30px
+  50%
+    margin-top: -137%
+  100%
+    margin-top: 30px
+
+
+// Responsive - Small
+
+@media screen and (max-width: 640px)
+  .work-content
+    padding: 1.5em
+  .work-item-title
+    margin-right: 70px
+  .work-close
+    width: 50px
+    height: 50px
+    border: 2px solid $purored
+    top: 3em
+    right: 3em
+    &:hover
+      border: 2px solid #AAA
+  .browser
+    height: auto
+    overflow: auto
+  .browser img
+    height: auto
+    position: relative
+    margin: 0
+  .browser iframe
+    display: none
+  .work-text
+    flex-direction: column
+    .col
+      width: 100%
