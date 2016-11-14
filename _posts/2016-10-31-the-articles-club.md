@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A Classic Concept, Futurized."
+title:  "A Classic Concept, Made for the Future."
 description: Strategy / Development / Design / Branding
 date:   2016-10-31 09:11:03
 bgimg: '/tac/tac.png'
