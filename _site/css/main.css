@@ -700,26 +700,16 @@ nav {
   margin: 0;
   letter-spacing: -0.06em;
   margin-top: 15px;
+  margin-bottom: 50px;
   padding: 0;
-  padding-top: -webkit-calc(10vw + 10vh + 5vmin);
-  padding-top: calc(10vw + 10vh + 5vmin);
   text-align: left;
   font-size: -webkit-calc(3vw + 3vh + 1.5vmin);
   font-size: calc(3vw + 3vh + 1.5vmin); }
-  @media screen and (max-height: 800px) {
-    #home .hero {
-      padding-top: -webkit-calc(5vw + 5vh + 2.5vmin);
-      padding-top: calc(5vw + 5vh + 2.5vmin); } }
   @media screen and (max-width: 640px) {
     #home .hero {
       font-size: -webkit-calc(2vw + 2vh + 1vmin);
       font-size: calc(2vw + 2vh + 1vmin);
-      padding-top: -webkit-calc(1vw + 1em);
-      padding-top: calc(1vw + 1em); } }
-  @media screen and (min-width: 1900px) {
-    #home .hero {
-      padding-top: -webkit-calc(8vw + 8vh + 4vmin);
-      padding-top: calc(8vw + 8vh + 4vmin); } }
+      margin-bottom: 10px; } }
 
 .work-link {
   text-decoration: none; }
