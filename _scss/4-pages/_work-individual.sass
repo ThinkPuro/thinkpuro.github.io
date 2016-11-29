@@ -9,14 +9,14 @@
   z-index: 2
   cursor: pointer !important
   border: 5px solid $purored
-  +ease
   opacity: 0
-  transform: translateX(30px) rotate(0deg)
+  transition: all 500ms ease-in-out
   transform-origin: center center
+  transform: translateY(30px) scale(0.2)
   box-shadow: 0 5px 15px -2px rgba($purored, 0.5)
   &:hover
     border: 5px solid #AAA
-    transform: translateX(0) rotate(90deg)
+    transform: translateY(0) rotate(90deg)
     box-shadow: 5px 0 15px -2px #CCC
     .button
       &:after, &:before
@@ -38,18 +38,15 @@
     &:after
       transform: rotate(-45deg)
 
-.work-close-load
-  opacity: 1
-  transform: translateX(0)
-
 .work-content
   background-color: #FFF
   display: block
+  opacity: 0
+  transform: translateY(30px) scale(.98)
   img
     margin-bottom: 25px
     min-width: 100%
     height: auto
-
 
 .info-button
   font-size: 14px
@@ -212,6 +209,8 @@
 @media screen and (max-width: 640px)
   .work-content
     padding: 1.5em
+  .work-item-header
+    margin-bottom: 50px
   .work-item-title
     margin-right: 70px
   .work-close

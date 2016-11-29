@@ -1,32 +1,47 @@
 #home .hero
-    font-size: 48px
-    font-size: 6.3em
-    line-height: 1.1em
-    display: inline-block
     margin: 0
-    letter-spacing: -0.06em
-    margin-top: 15px
-    margin-bottom: 50px
-    padding: 0
-    text-align: left
-    font-size: calc(3vw + 3vh + 1.5vmin)
-    @media screen and (max-width: 640px)
-        font-size: calc(2vw + 2vh + 1vmin)
-        margin-bottom: 10px
+    height: 60vh
+    position: relative
+    padding: 2rem
+    +clearfix
+    h1
+        line-height: 1.1em
+        height: auto
+        text-align: left
+        letter-spacing: -.05em
+        font-size: calc(3vw + 3vh + 1.5vmin)
+        margin: 0
+        position: relative
+        padding: 0
+        top: 50%
+        transform: translateY(-60%)
+        width: 65%
+        z-index: 1
+    .puro-smile-container
+        position: absolute
+        right: 2rem
+        top: 20px
+        display: block
+        height: 90%
+        width: auto
+        svg
+            height: 100%
+            width: auto
 
 .work-link
     text-decoration: none
+    display: block
+    padding: 1rem 2rem
+    padding-top: 0
 
 .work-item
     display: block
     width: auto
-    height: 275px
-    // background-color: $purored
+    height: 500px
     padding: 20px
     position: relative
-    margin-bottom: 20px
     background-size: contain
-    background-position: center right
+    background-position: bottom right
     background-repeat: no-repeat
     text-decoration: none
     position: relative
@@ -40,15 +55,19 @@
         background-color: #222
         opacity: 0
         +ease
+
     &:hover
+        // filter: blur(5px)
         .overlay
             opacity: 1
     .work-item-description
-        // position: absolute
-        // bottom: 20px
+        position: absolute
+        bottom: 0
+        padding: 1rem 1rem 2rem 1rem
         h1
             color: #FFF
             margin: 0
+            font-size: 2rem
             font-family: "franklin-gothic-urw", sans-serif
             letter-spacing: 0.01em
             text-transform: uppercase
@@ -57,3 +76,49 @@
             color: rgba(white,0.6)
             margin: 0
             mix-blend-mode: difference;
+
+.home-puro-smile-eyes
+        transform-origin: center center
+        transform: scaleY(1)
+        animation: puroBlink 9s ease-in-out infinite
+
+
+@media screen and (max-width: 640px)
+    #home .hero
+        height: auto
+        padding: 4em 1em
+        h1
+            width: 100%
+            margin-bottom: 10px
+            top: 0
+            left: -8px
+            transform: translateY(-20%)
+            font-size: calc(2.9vw + 2.9vh + 1.5vmin)
+        .puro-smile-container
+            top: 0
+    .work-item
+        .work-item-description
+            top: 0
+            padding: 2em 0
+    .work-link
+        padding: 0 1em
+
+/* Animations */
+
+@keyframes puroBlink
+    0%
+        transform: scaleY(1)
+    15.5%
+        transform: scaleY(1)
+    16%
+        transform: scaleY(0)
+    16.5%
+        transform: scaleY(1)
+    18.5%
+        transform: scaleY(1)
+    19%
+        transform: scaleY(0)
+    19.5%
+        transform: scaleY(1)
+    100%
+        transform: scaleY(1)

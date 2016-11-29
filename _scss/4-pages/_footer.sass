@@ -1,0 +1,29 @@
+.footer
+  width: 100%
+  padding: 2rem 2rem 6rem 2rem
+  background-color: #222
+  opacity: 0
+  transform-origin: top center
+  transform: scale(0.98)
+  transition: all .3s .2s ease
+  +clearfix
+  .footer-section
+    +span-columns(3)
+    border-top: solid .5px #666
+    padding-top: 10px
+    padding-bottom: 20px
+    p
+      margin: 0
+      color: #999 !important
+      a
+        color: #EEE
+        &:hover
+          background-color: $purored
+
+@media screen and (max-width: 640px)
+  .footer
+    height: auto
+    padding: 2em 1em 6rem 1em
+    .footer-section
+      +span-columns(6)
+      +omega(2n)

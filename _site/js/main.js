@@ -1,5 +1,8 @@
 $(window).on('load', function() {
-    $('.loader').addClass('load');
+    $('.site, .footer').removeClass('preload');
+    setTimeout(function(){
+        $('.site, .footer').addClass('load');
+    }, 500);
     $('.browser').hover(
         function(){
             $(this).stop().animate({ scrollTop: $(this).find('img').height() }, 20000);
@@ -15,9 +18,9 @@ $(document).ready(function() {
         $(this).addClass("active");
         }
     });
-    $("nav a, .work-item").click(function(){
-        $('body').addClass('unload');
-    });
+    // $("nav a, .work-item").click(function(){
+    //     $('.site, .footer').removeClass('load');
+    // });
     $('.mobile-nav-button').click(
         function(){
             $(this).toggleClass('mobile-nav-open');
@@ -28,7 +31,8 @@ $(document).ready(function() {
         $('.work-content').addClass('work-load');
         $('.work-close').addClass('work-close-load');
         $(".work-close, .thanks-link").click(function(){
-            $('.work-content, .work-close').addClass('unload');
+            $('.work-content').removeClass('work-load');
+            $('.work-close').removeClass('work-close-load');
         });
     }
 
