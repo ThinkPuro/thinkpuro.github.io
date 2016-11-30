@@ -685,8 +685,8 @@ nav {
     height: auto;
     text-align: left;
     letter-spacing: -.05em;
-    font-size: -webkit-calc(3vw + 3vh + 1.5vmin);
-    font-size: calc(3vw + 3vh + 1.5vmin);
+    font-size: -webkit-calc(3vw + 3vh + 1vmin);
+    font-size: calc(3vw + 3vh + 1vmin);
     margin: 0;
     position: relative;
     padding: 0;
@@ -776,8 +776,8 @@ nav {
       -webkit-transform: translateY(-20%);
           -ms-transform: translateY(-20%);
               transform: translateY(-20%);
-      font-size: -webkit-calc(2.9vw + 2.9vh + 1.5vmin);
-      font-size: calc(2.9vw + 2.9vh + 1.5vmin); }
+      font-size: -webkit-calc(2.9vw + 2.9vh + 1vmin);
+      font-size: calc(2.9vw + 2.9vh + 1vmin); }
     #home .hero .puro-smile-container {
       top: 0; }
   .work-item .work-item-description {
@@ -785,6 +785,11 @@ nav {
     padding: 2em 0; }
   .work-link {
     padding: 0 1em; } }
+
+@media screen and (min-width: 1800px) {
+  #home .hero h1 {
+    font-size: -webkit-calc(3.5vw + 3.5vh + 1vmin);
+    font-size: calc(3.5vw + 3.5vh + 1vmin); } }
 
 /* Animations */
 @-webkit-keyframes puroBlink {
